@@ -7,7 +7,7 @@ class Gear
       def initialize(chaining, cog, wheel=nil)
           @chaining = chaining
           @cog      = cog
-          @rim      = wheel
+          @wheel    = wheel
       end
 
       def ratio
@@ -22,13 +22,13 @@ end
 class Wheel
       attr_reader :rim ,:tire
 
-      def initialize(rim, tyre)
+      def initialize(rim, tire)
           @rim   = rim
           @tire  = tire
       end
 
       def diameter
-          rim + (tire * 2)
+          rim+(tire * 2)
       end
 
       def circumference
@@ -37,13 +37,13 @@ class Wheel
 
 end
 
-@wheel = Wheel.new(26,1.5)
+@wheel = Wheel.new(26,1)
+puts @wheel.circumference
 puts Gear.new(52,11).ratio
-puts Gear.new(52,11,@wheel).gear_inches
 puts Gear.new(52,11,@wheel).gear_inches
 
 
 # output
+# 87.96459430051421
 # 4.7272727272727275
-# ratio_classes_after_single.rb:18:in `gear_inches': undefined method `diameter' for nil:NilClass (NoMethodError)
-#	from ratio_classes_after_single.rb:42:in `<main>'
+# 132.36363636363637
