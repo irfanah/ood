@@ -1,16 +1,17 @@
+# Example 3
 # enahncement : also calculate the effect of the difference in wheels.
 #               gear inches = wheel diameter * gear ratio
 #               wheel diameter = rim diameter + twice tire diameter.
 #               now ,change the Gear class to add this new behavior
 
 class Gear
-      attr_reader :chaining ,:cog ,:rim ,:tyre
+      attr_reader :chaining ,:cog ,:rim ,:tire
 
-      def initialize(chaining, cog, rim, tyre)
+      def initialize(chaining, cog, rim, tire)
           @chaining = chaining
           @cog      = cog
           @rim      = rim
-          @tyre     = tyre
+          @tire     = tire
       end
 
       def ratio
@@ -18,7 +19,7 @@ class Gear
       end
 
       def gear_inches
-          ratio * (rim + (tyre*2))
+          ratio * (rim + (tire*2))
       end
 end
 

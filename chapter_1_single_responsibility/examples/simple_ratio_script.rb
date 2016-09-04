@@ -1,3 +1,4 @@
+# Example 1
 # To compare different gears ,bycyclists use the ratio of the number of teeths.
 
 chaining = 52                     # number of teeth

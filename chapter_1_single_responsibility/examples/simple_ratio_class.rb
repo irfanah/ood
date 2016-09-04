@@ -1,3 +1,5 @@
+# Example 2
+
 class Gear
       attr_reader :chaining ,:cog
 
